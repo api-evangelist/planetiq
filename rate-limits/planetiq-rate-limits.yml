@@ -1,0 +1,31 @@
+generated: '2026-08-26'
+method: searched
+source: https://planetiq.com/products/
+description: >-
+  No rate limits are published because PlanetiQ publishes no callable API. Every
+  candidate API host (api./data./portal./docs./developer./app.planetiq.com) fails
+  DNS resolution, and every spec path probed on planetiq.com returns 404, so there
+  is no request surface to which a limit, window, burst or Retry-After header could
+  apply. Data is delivered as netCDF files on a contracted delivery cadence
+  (PlanetiQ describes "daily deliveries" of GNSS-RO data to NOAA) rather than as
+  metered API calls. limit_count: 0 here means "checked, the provider publishes
+  none", not "not checked".
+limit_count: 0
+rate_limits: []
+headers: []
+delivery_model:
+  style: bulk-file-delivery
+  format: netCDF
+  cadence: daily deliveries under contract (NOAA CDP)
+  metered_api: false
+  source: https://planetiq.com/planetiq-gnss-ro-data-noaa/
+evidence:
+  - url: https://planetiq.com/openapi.json
+    status: 404
+  - url: https://planetiq.com/swagger.json
+    status: 404
+  - url: https://planetiq.com/api-docs
+    status: 404
+  - url: https://api.planetiq.com/
+    status: 0
+    note: DNS does not resolve (no A/AAAA record)

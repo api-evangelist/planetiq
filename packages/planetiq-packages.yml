@@ -1,0 +1,69 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io, nuget.org, packagist.org,
+  search.maven.org, https://github.com/planetiq
+description: >-
+  PlanetiQ publishes no client library, SDK, or CLI in any public package registry.
+  This is a recorded absence after querying each registry directly, not an
+  un-researched gap — and it follows from the finding in the rest of this profile:
+  there is no PlanetiQ API for a client library to wrap. NO SDKs pointer is emitted
+  in apis.yml, because sdk_count must not be credited where no SDK exists.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_checked:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search?text=planetiq
+  status: 200
+  matches: 0
+- registry: pypi
+  endpoint: https://pypi.org/pypi/planetiq/json
+  status: 404
+  matches: 0
+- registry: rubygems
+  endpoint: https://rubygems.org/api/v1/gems/planetiq.json
+  status: 404
+  matches: 0
+- registry: crates.io
+  endpoint: https://crates.io/api/v1/crates?q=planetiq
+  status: 200
+  matches: 0
+- registry: nuget
+  endpoint: https://azuresearch-usnc.nuget.org/query?q=planetiq
+  status: 200
+  matches: 0
+- registry: packagist
+  endpoint: https://packagist.org/search.json?q=planetiq
+  status: 200
+  matches: 0
+  note: >-
+    The search reports 183 hits but every one is an unrelated fuzzy match on
+    "planet" (tc-lib-barcode, planet4-master-theme, ts3-php-framework, ...). No
+    PlanetiQ vendor namespace exists.
+- registry: maven-central
+  endpoint: https://search.maven.org/solrsearch/select?q=planetiq
+  status: <no response>
+  matches: null
+  note: >-
+    The Maven Central search endpoint did not answer within the probe timeout. One
+    attempt only, per the pipeline's probe-bounding rule; recorded as unchecked
+    rather than retried. Given zero hits across six other registries and no JVM
+    client anywhere in PlanetiQ's own repositories, a Maven artifact is unlikely
+    but is not disproven here.
+github_organization:
+  url: https://github.com/planetiq
+  status: 200
+  created: '2025-03-12'
+  public_repos: 13
+  note: >-
+    PlanetiQ's GitHub organization exists and is active, but it contains no client
+    SDK and no company software product. All thirteen repositories are public forks
+    of the JCSDA/NOAA data-assimilation stack that consumes RO observations — ioda
+    ("PlanetiQ public fork of IODA"), ufo, oops, fv3-jedi-linearmodel,
+    GFDL_atmos_cubed_sphere, femps, ioda-converters, the jedi/fv3/ioda bundles and
+    jedi-docs — plus an aws-certificate-authority-sample. This is a science-team
+    org working inside the JEDI ecosystem, not a developer-platform org. Several
+    forks are current (ufo and ioda pushed 2026-02-04), which is a real signal
+    about where PlanetiQ's engineering effort goes: into the models that ingest the
+    data, not into an API for third parties to call.

@@ -1,0 +1,46 @@
+generated: '2026-08-26'
+method: searched
+source: https://planetiq.com/products/
+docs: https://planetiq.com/company/contact-us/
+description: >-
+  PlanetiQ publishes no pricing page, no plan tiers, and no self-service purchase
+  path. https://planetiq.com/pricing/ and https://planetiq.com/plans/ both return
+  HTTP 404, and the products page (https://planetiq.com/products/) closes on a
+  "Contact Us" call to action rather than a price. Revenue is contract-based: NOAA
+  Commercial Data Program radio occultation data buys (RODB-2 IDIQ delivery
+  orders), NASA Commercial Satellite Data Acquisition on-ramps, and a U.S. Air
+  Force STRATFI agreement, each announced by press release with a contract value
+  rather than a published rate card. This is a recorded absence, not an
+  un-researched gap.
+plan_count: 0
+plans: []
+commercial_model:
+  self_service: false
+  free_tier: false
+  published_rate_card: false
+  access_path: sales-contact
+  government_distribution:
+    - program: NASA Commercial Satellite Data Acquisition (CSDA)
+      portal: https://csdap.earthdata.nasa.gov/
+      note: >-
+        Approved users (U.S. Government employees, USG contractors and USG-funded
+        researchers, plus other users under the applicable CSDA license tier)
+        request PlanetiQ netCDF products through NASA's Satellite Data Explorer
+        after completing the CSDA Authorization form. Distribution is NASA's, not
+        PlanetiQ's — no PlanetiQ-operated endpoint is involved.
+      source: https://science.nasa.gov/earth-science/csda/vendor-planetiq/
+    - program: NOAA Commercial Data Program (CDP)
+      note: >-
+        PlanetiQ delivers GNSS-RO and ionospheric TEC data to NOAA under RODB-2
+        delivery orders; NOAA redistributes it into the global NWP data stream.
+        Contract awards are announced on PlanetiQ's news page.
+      source: https://planetiq.com/company/news/
+evidence:
+  - url: https://planetiq.com/pricing/
+    status: 404
+  - url: https://planetiq.com/plans/
+    status: 404
+  - url: https://planetiq.com/products/
+    status: 200
+  - url: https://planetiq.com/company/contact-us/
+    status: 200

@@ -1,0 +1,35 @@
+generated: '2026-08-26'
+method: probed
+source: https://planetiq.com/.well-known/
+description: >-
+  Results of probing the /.well-known/ discovery surface for PlanetiQ. apis.yml
+  declares no apis[] and therefore no baseURL or OpenAPI servers[] host, so the
+  only host with a published surface is the corporate site, planetiq.com (the
+  candidate API hosts api./data./portal./docs./developer./app.planetiq.com do not
+  resolve in DNS — see security/planetiq-domain-security.yml). Every /.well-known/
+  path returns the WordPress 404 template (HTTP 404, text/html), so nothing was
+  saved and NO WellKnown or SecurityTxt pointer is emitted in apis.yml. A separate,
+  real find sits outside /.well-known/: planetiq.com/llms.txt returns HTTP 200
+  text/plain and is saved verbatim to llms/planetiq-llms.txt.
+hosts:
+  - host: https://planetiq.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+notes:
+  - The 404 bodies are the site's HTML 404 template, not a JSON or text document;
+    none of them is a soft-200 false positive.
+  - No A2A agent card was found on any host, so per the pipeline contract no a2a/
+    artifact was authored — an agent card is search-only and must never be derived.

@@ -1,17 +1,36 @@
 aid: planetiq
 name: PlanetiQ
-description: 'PlanetiQ is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'PlanetiQ is a commercial space-weather and atmospheric data company headquartered in
+  Golden, Colorado, operating the GNOMES constellation of small satellites carrying its Pyxis GNSS
+  radio occultation (GNSS-RO) sensor. Pyxis receives signals from all four global navigation
+  constellations (GPS, GLONASS, Galileo and BeiDou) and turns the refracted signal into vertical
+  atmospheric profiles of temperature, pressure, density, refractivity and humidity at 100 m vertical
+  resolution, plus ionospheric total electron content, scintillation phase and polarimetric
+  precipitation observations. The data is sold as Level 1B calibrated phase/SNR and Level 2 bending
+  angle/refractivity products, primarily under U.S. government contracts (NOAA Commercial Data Program
+  radio occultation data buys, NASA Commercial Satellite Data Acquisition, U.S. Air Force STRATFI) and
+  redistributed to authorized users in netCDF via NASA''s Satellite Data Explorer. PlanetiQ publishes no
+  public developer program, no API, and no machine-readable API contract; commercial and defense access
+  runs through a sales conversation rather than self-service onboarding.'
 url: https://raw.githubusercontent.com/api-evangelist/planetiq/refs/heads/main/apis.yml
+image: https://planetiq.com/wp-content/uploads/2025/07/planetIQ-white-color-logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Weather
+- Satellite
+- Earth Observation
+- Space Weather
+- Atmospheric Data
+- GNSS Radio Occultation
+- Climate
+- Aerospace
+- Defense
+- Geospatial
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +39,57 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://planetiq.com/
+- type: Products
+  url: https://planetiq.com/products/
+- type: Support
+  url: https://planetiq.com/company/contact-us/
+- type: Blog
+  url: https://planetiq.com/company/news/
+- type: BlogRSS
+  url: https://planetiq.com/feed/
+- type: GitHubOrganization
+  url: https://github.com/planetiq
+- type: LinkedIn
+  url: https://www.linkedin.com/company/planetiq
+- type: TermsOfService
+  url: https://planetiq.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://planetiq.com/privacy-policy/
+- type: LLMsTxt
+  url: llms/planetiq-llms.txt
+- type: Plans
+  url: plans/planetiq-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/planetiq-rate-limits.yml
+- type: DomainSecurity
+  url: security/planetiq-domain-security.yml
+- type: Packages
+  url: packages/planetiq-packages.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    PlanetiQ sells GNSS radio occultation data as netCDF files under NOAA and NASA
+    contracts and redistributes it through NASA's own Satellite Data Explorer, so
+    it operates no developer program of its own — api., data., portal., docs.,
+    developer. and app.planetiq.com all fail DNS resolution and every spec path on
+    planetiq.com 404s, while the products page ends in a Contact Us form rather
+    than an endpoint.
+  evidence:
+  - url: https://planetiq.com/openapi.json
+    status: 404
+  - url: https://planetiq.com/swagger.json
+    status: 404
+  - url: https://planetiq.com/api-docs
+    status: 404
+  - url: https://api.planetiq.com/
+    status: 0
+  - url: https://planetiq.com/llms.txt
+    status: 200
+  checked: '2026-08-26'
