@@ -13,6 +13,17 @@ description: 'PlanetiQ is a commercial space-weather and atmospheric data compan
   public developer program, no API, and no machine-readable API contract; commercial and defense access
   runs through a sales conversation rather than self-service onboarding.'
 url: https://raw.githubusercontent.com/api-evangelist/planetiq/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://planetiq.com/wp-content/uploads/2025/07/planetIQ-white-color-logo.svg
 x-type: company
 x-source: harvest:secondary-market
