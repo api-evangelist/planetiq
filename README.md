@@ -64,5 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PlanetiQ is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+PlanetiQ is a commercial space-weather and atmospheric data company headquartered in Golden, Colorado, operating the GNOMES constellation of small satellites carrying its Pyxis GNSS radio occultation (GNSS-RO) sensor. Pyxis receives signals from all four global navigation constellations (GPS, GLONASS, Galileo and BeiDou) and turns the refracted signal into vertical atmospheric profiles of temperature, pressure, density, refractivity and humidity at 100 m vertical resolution, plus ionospheric total electron content, scintillation phase and polarimetric precipitation observations. The data is sold as Level 1B calibrated phase/SNR and Level 2 bending angle/refractivity products, primarily under U.S. government contracts (NOAA Commercial Data Program radio occultation data buys, NASA Commercial Satellite Data Acquisition, U.S. Air Force STRATFI) and redistributed to authorized users in netCDF via NASA's Satellite Data Explorer. PlanetiQ publishes no public developer program, no API, and no machine-readable API contract; commercial and defense access runs through a sales conversation rather than self-service onboarding.
+
+**Areas:** Company · Weather · Satellite · Earth Observation · Space Weather · Atmospheric Data · GNSS Radio Occultation · Climate · Aerospace · Defense · Geospatial
+
+## PlanetiQ on APIs.io
+
+Everything profiled for PlanetiQ is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/planetiq/](https://apis.io/providers/planetiq/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Planetiq Domain Security](https://apis.io/security/planetiq/planetiq-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Planetiq Plans Pricing](https://apis.io/plans/planetiq/planetiq-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Planetiq Rate Limits](https://apis.io/rate-limits/planetiq/planetiq-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://planetiq.com/)
+- [Support](https://planetiq.com/company/contact-us/)
+- [Blog](https://planetiq.com/company/news/)
+- [Terms of service](https://planetiq.com/terms-of-use/)
+- [Privacy policy](https://planetiq.com/privacy-policy/)
+- [GitHub](https://github.com/planetiq)
+
+## API Evangelist rating
+
+**Kin Score 11.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/planetiq/](https://apis.io/providers/planetiq/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PlanetiQ: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/planetiq/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
